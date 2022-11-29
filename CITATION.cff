@@ -1,0 +1,28 @@
+abstract: Development documentation for the fairhub.io project
+authors:
+  - affiliation: FAIR Data Innovations Hub
+    email: ssoundarajan@calmi2.org
+    family-names: Soundarajan
+    given-names: Sanjay
+  - affiliation: FAIR Data Innovations Hub
+    email: bpatel@calmi2.org
+    family-names: Patel
+    given-names: Bhavesh
+cff-version: 1.2.0
+date-released: '2022-11-29'
+identifiers:
+  - description: DOI for this software's record on Zenodo
+    type: doi
+    value: https://doi.org/10.5281/zenodo.7373697
+keywords:
+  - AI-READI
+  - fairhub
+  - project
+license: MIT
+message: If you use this software, please cite it as below.
+repository-artifact: https://github.com/AI-READI/dev.fairhub.io
+repository-code: https://github.com/AI-READI/dev.fairhub.io
+title: dev.fairhub.io
+type: software
+url: https://dev.fairhub.io/
+version: 0.0.1
