@@ -109,7 +109,7 @@ yarn docs:build
 
 # Deployment
 
-This repository is automatically deployed to [Azure](https://www.netlify.com/) on every push to the repository. If you need to reference a specific branch or pull request, you can do so by using the following URL pattern:
+This repository is automatically deployed to [Azure](https://azure.microsoft.com/en-us/) on every push to the repository. If you need to reference a specific branch or pull request, you can do so by using the following URL pattern:
 
 - https://ashy-coast-0f7701e10-<BRANCH_NAME>.centralus.2.azurestaticapps.net/
 - https://ashy-coast-0f7701e10-<GITHUB_PR_NUMBER>.centralus.2.azurestaticapps.net/
