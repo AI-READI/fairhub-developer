@@ -44,9 +44,9 @@ Testing is an important part of the development process. It helps to ensure that
 
 | Tool/framework | Min version | License | Intended use in our project                                                             |
 | -------------- | ----------- | ------- | --------------------------------------------------------------------------------------- |
-| Cypress        | 10.7.0      | MIT     | End-to-end, Integration and/or unit testing for the browser-based front-end application |
-| Vitest         | 0.23.0      | MIT     | A Vite-native unit test framework for Vue applications                                  |
-| Pytest         | 3.6.3       | MIT     | Testing framework for Python applications                                               |
+| [Cypress](https://www.npmjs.com/package/cypress)        | 10.7.0      | MIT     | End-to-end, Integration and/or unit testing for the browser-based front-end application |
+| [Vitest](https://www.npmjs.com/package/vitest)         | 0.23.0      | MIT     | A Vite-native unit test framework for Vue applications                                  |
+| [Pytest](https://pypi.org/project/pytest/)         | 3.6.3       | MIT     | Testing framework for Python applications                                               |
 
 ## Dependency management
 
