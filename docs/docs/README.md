@@ -43,7 +43,7 @@ yarn install
 Start the server
 
 ```sh
-yarn dev
+yarn docs:dev
 ```
 
 ## Build locally

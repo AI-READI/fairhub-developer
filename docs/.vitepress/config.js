@@ -109,6 +109,7 @@ export default defineConfig({
       '/docs': sidebarGuide(),
       '/git': sidebarGuide(),
       '/general': sidebarGuide(),
+      '/fairhub': sidebarGuide(),
     },
 
     footer: {
@@ -147,6 +148,12 @@ function sidebarGuide() {
       text: 'General',
       collapsible: true,
       items: [{ text: 'Commenting code', link: '/general/comments.md' }],
+    },
+
+    {
+      text: 'fairhub.io',
+      collapsible: true,
+      items: [{ text: 'Tech stack', link: '/fairhub/techstack.md' }],
     },
   ];
 }

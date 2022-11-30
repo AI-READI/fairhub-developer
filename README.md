@@ -107,6 +107,15 @@ Use this step to build a local production version of the site. Use `serve` to pr
 yarn docs:build
 ```
 
+# Deployment
+
+This repository is automatically deployed to [Azure](https://azure.microsoft.com/en-us/) on every push to the repository. If you need to reference a specific branch or pull request, you can do so by using the following URL pattern:
+
+- https://ashy-coast-0f7701e10-<BRANCH_NAME>.centralus.2.azurestaticapps.net/
+- https://ashy-coast-0f7701e10-<GITHUB_PR_NUMBER>.centralus.2.azurestaticapps.net/
+
+The `production` branch is automatically deployed to the following URL: https://dev.fairhub.io
+
 ## Contributing
 
 <a href="https://github.com/AI-READI/dev.fairhub.io/graphs/contributors">
