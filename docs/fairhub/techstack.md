@@ -42,11 +42,11 @@ The backend is the server-side of the application. It is responsible for handlin
 
 Testing is an important part of the development process. It helps to ensure that the code is working as intended and that it is not breaking existing functionality. It also helps to ensure that the code is maintainable and that it is easy to extend. Testing is done in two ways: unit testing and integration testing. Unit testing is done on the frontend and backend. Integration testing is done on the backend. The frontend is tested by simulating user interactions and checking the results. The backend is tested by sending requests to the API and checking the results.
 
-| Tool/framework | Min version | License | Intended use in our project                                                             |
-| -------------- | ----------- | ------- | --------------------------------------------------------------------------------------- |
-| [Cypress](https://www.npmjs.com/package/cypress)        | 10.7.0      | MIT     | End-to-end, Integration and/or unit testing for the browser-based front-end application |
-| [Vitest](https://www.npmjs.com/package/vitest)         | 0.23.0      | MIT     | A Vite-native unit test framework for Vue applications                                  |
-| [Pytest](https://pypi.org/project/pytest/)         | 3.6.3       | MIT     | Testing framework for Python applications                                               |
+| Tool/framework                                   | Min version | License | Intended use in our project                                                             |
+| ------------------------------------------------ | ----------- | ------- | --------------------------------------------------------------------------------------- |
+| [Cypress](https://www.npmjs.com/package/cypress) | 10.7.0      | MIT     | End-to-end, Integration and/or unit testing for the browser-based front-end application |
+| [Vitest](https://www.npmjs.com/package/vitest)   | 0.23.0      | MIT     | A Vite-native unit test framework for Vue applications                                  |
+| [Pytest](https://pypi.org/project/pytest/)       | 3.6.3       | MIT     | Testing framework for Python applications                                               |
 
 ## Dependency management
 
