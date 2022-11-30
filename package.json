@@ -16,7 +16,8 @@
   },
   "lint-staged": {
     "./**/*.{ts,js,jsx,tsx,md}": [
-      "yarn format"
+      "yarn format",
+      "yarn docs:build"
     ]
   },
   "devDependencies": {
