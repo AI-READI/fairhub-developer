@@ -9,7 +9,7 @@ hero:
   text: ''
   tagline: Full documentation for every fairhub.io developer...
   image:
-    src: https://raw.githubusercontent.com/AI-READI/AI-READI-logo/main/logo/png/option2.png
+    src: https://raw.githubusercontent.com/AI-READI/fairhub.io-logo/main/fulltext.svg
     alt: fairhub logo
   actions:
     - theme: brand
