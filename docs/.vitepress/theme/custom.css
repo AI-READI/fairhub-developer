@@ -1,7 +1,7 @@
 :root {
-  --vp-c-brand: #cb128d;
-  --vp-c-brand-light: #ed32ae;
-  --vp-c-brand-dark: #ad0f78;
+  --vp-c-brand: #ff3b3f;
+  --vp-c-brand-light: #ff6a6d;
+  --vp-c-brand-dark: #ff0c11;
 }
 
 .outline-link.active {
