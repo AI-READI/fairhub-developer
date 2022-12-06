@@ -130,6 +130,10 @@ function sidebarGuide() {
           text: 'About these docs',
           link: '/docs/README.md',
         },
+        {
+          text: 'Best practices',
+          link: '/docs/best-practices.md',
+        },
       ],
     },
 
