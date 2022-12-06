@@ -10,13 +10,13 @@
 - [x] 1.5. Add a README.md file in the root of your GitHub repository and include at least the following information as they become available
   - [x] 1.5.1 Brief description of the software
   - [x] 1.5.2 How to run the software (from the source code)
-  - [] 1.5.3 Inputs and outputs of the software, if applicable
-  - [] 1.5.4 Parameters, data, and data formats required to run the software, if applicable
-  - [] 1.5.5 The standards followed during development
+  - [ ] 1.5.3 Inputs and outputs of the software, if applicable
+  - [ ] 1.5.4 Parameters, data, and data formats required to run the software, if applicable
+  - [ ] 1.5.5 The standards followed during development
   - [x] 1.5.6 How to report bugs/issues
   - [x] 1.5.7 Acknowledgment of NIH funding support
-  - [] 1.5.8 Other acknowledgments, if applicable
-  - [] 1.5.9 Clear attribution for authorship and software dependencies
+  - [ ] 1.5.8 Other acknowledgments, if applicable
+  - [ ] 1.5.9 Clear attribution for authorship and software dependencies
   - [x] 1.5.10 Include [shields.io](https://shields.io) badges at the top of your README to showcase the following: license, number of contributors, number of open issues, Zenodo DOI
   - [x] 1.5.11 Include the [AI-READI logo](https://github.com/AI-READI/AI-READI-logo) at the bottom of your README
 
@@ -32,7 +32,7 @@
 - [x] 2.5. If using external libraries, favor well-maintained software libraries and make sure their license is compatible with your software license
 - [x] 2.6. Record software dependencies in a requirements.txt or similar file
 - [ ] 2.7. Add appropriate tests (unit, integration, and end-to-end) to all modules in your application.
-- [ ]2.8. Identify and utilize tools to benchmark for accessibility such as Accessibility Insights for Web development etc.
+- [ ] 2.8. Identify and utilize tools to benchmark for accessibility such as Accessibility Insights for Web development etc.
 - [x] 2.9. Web-based software should support Modern Browsers developed with the Webkit, Blink, or Gecko rendering engines (e.g. Chrome, Safari, Firefox, MS Edge).
 
 ## 3. Pushing changes to GitHub repository
