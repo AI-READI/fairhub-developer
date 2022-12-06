@@ -10,13 +10,13 @@
 - [x] 1.5. Add a README.md file in the root of your GitHub repository and include at least the following information as they become available
   - [x] 1.5.1 Brief description of the software
   - [x] 1.5.2 How to run the software (from the source code)
-  - [] 1.5.3 Inputs and outputs of the software, if applicable
-  - [] 1.5.4 Parameters, data, and data formats required to run the software, if applicable
-  - [] 1.5.5 The standards followed during development
+  - [ ] 1.5.3 Inputs and outputs of the software, if applicable
+  - [ ] 1.5.4 Parameters, data, and data formats required to run the software, if applicable
+  - [ ] 1.5.5 The standards followed during development
   - [x] 1.5.6 How to report bugs/issues
   - [x] 1.5.7 Acknowledgment of NIH funding support
-  - [] 1.5.8 Other acknowledgments, if applicable
-  - [] 1.5.9 Clear attribution for authorship and software dependencies
+  - [ ] 1.5.8 Other acknowledgments, if applicable
+  - [ ] 1.5.9 Clear attribution for authorship and software dependencies
   - [x] 1.5.10 Include [shields.io](https://shields.io) badges at the top of your README to showcase the following: license, number of contributors, number of open issues, Zenodo DOI
   - [x] 1.5.11 Include the [AI-READI logo](https://github.com/AI-READI/AI-READI-logo) at the bottom of your README
 
