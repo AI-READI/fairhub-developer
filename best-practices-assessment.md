@@ -32,7 +32,7 @@
 - [x] 2.5. If using external libraries, favor well-maintained software libraries and make sure their license is compatible with your software license
 - [x] 2.6. Record software dependencies in a requirements.txt or similar file
 - [ ] 2.7. Add appropriate tests (unit, integration, and end-to-end) to all modules in your application.
-- [ ]2.8. Identify and utilize tools to benchmark for accessibility such as Accessibility Insights for Web development etc.
+- [ ] 2.8. Identify and utilize tools to benchmark for accessibility such as Accessibility Insights for Web development etc.
 - [x] 2.9. Web-based software should support Modern Browsers developed with the Webkit, Blink, or Gecko rendering engines (e.g. Chrome, Safari, Firefox, MS Edge).
 
 ## 3. Pushing changes to GitHub repository
