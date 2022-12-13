@@ -5,9 +5,10 @@ title: fairhub.io Developer Docs
 titleTemplate: fairhub.io
 
 hero:
-  name: Developer Docs
-  text: ''
-  tagline: Full documentation for every fairhub.io developer...
+  name: ''
+  tagline: 'fairhub.io is the data management, curation, and sharing platform developed for AI-READI, a data generation project of the NIH Bridge2AI program'
+  text: Full documentation for every fairhub.io developer
+
   image:
     src: https://raw.githubusercontent.com/AI-READI/fairhub.io-logo/main/fulltext.svg
     alt: fairhub logo
@@ -18,7 +19,9 @@ hero:
     - theme: alt
       text: Visit fairhub.io 🌐
       link: https://fairhub.io
-
+    - theme: alt
+      text: Learn about Bridge2AI
+      link: https://commonfund.nih.gov/bridge2ai
 features:
   - icon: ⚡
     title: Learn fast
