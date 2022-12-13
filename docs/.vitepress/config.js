@@ -103,6 +103,10 @@ export default defineConfig({
         text: 'fairhub.io',
         link: 'https://fairhub.io',
       },
+      {
+        text: 'Bridge2AI',
+        link: 'https://commonfund.nih.gov/bridge2ai',
+      },
     ],
 
     sidebar: {
