@@ -6,7 +6,7 @@ titleTemplate: fairhub.io
 
 hero:
   name: ''
-  tagline: 'fairhub.io is the data management, curation, and sharing platform developed for AI-READI, a data generation project of the NIH Bridge2AI program'
+  tagline: 'fairhub.io is the data management, curation, and sharing platform developed for AI-READI, a data generation project of the NIH-funded Bridge2AI program'
   text: Full documentation for every fairhub.io developer
 
   image:
