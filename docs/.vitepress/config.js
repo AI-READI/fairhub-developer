@@ -117,8 +117,9 @@ export default defineConfig({
     },
 
     footer: {
-      message: 'Released under the MIT License.',
-      copyright: 'Copyright © 2021-present | AI-READI',
+      copyright:
+        'This project is funded by the NIH under award number 1OT2OD032644. <br> The content is solely the responsibility of the authors and does not necessarily represent the official views of the NIH.',
+      message: 'Copyright © 2022-present | AI-READI',
     },
   },
 });
