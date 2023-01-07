@@ -10,25 +10,12 @@ This documentation is a central repository for storing developer information on 
 
 This resource also provides the conventions the team should be using while working on AI-READI applications.
 
-## Using the documentation
+## About AI-READI
 
-All documentation that applies globally will be in the docs section.
-For project specific instructions use the sidebar to navigate to the desired project for its build and release instructions.
+AI-READI is one of the data generation projects of the National Institutes of Health (NIH) funded Bridge2AI Program. The AI-READI project seeks to create and share a flagship ethically-sourced dataset of type 2 diabetes. The data will be optimized for future artificial intelligence/machine learning (AI/ML) analysis that could provide critical insights and especially shine light on the salutogenic pathways from diabetes to return to health.
 
-## Updating the documentation
+## Acknowledgements
 
-Whenever a change in build, release, or development instructions occurs update the documentation. To do this follow the below steps:
+This project is supported by the NIH-funded Bridge2AI program (1OT2OD032644). The content is solely the responsibility of the authors and does not necessarily represent the official views of the NIH.
 
-- Clone the [dev.fairhub.io](https://github.com/AI-READI/dev.fairhub.io) repository from GitHub
-
-```sh
-git clone https://github.com/AI-READI/dev.fairhub.io.git
-```
-
-- Get the project running locally using the [README](/docs/README.md) instructions
-- Create a separate branch based off `main`
-- Make your changes to the project and commit them to the local repository
-- Create a PR to the main branch with [@megasanjay](https://github.com/megasanjay) and/or [@bvhpatel](https://github.com/bvhpatel) as reviewers
-- After approval merge the PR into `main`
-
-These docs will be automatically deployed to https://dev.fairhub.io.
+![](https://github.com/AI-READI/Bridge2AI-logo/blob/main/logo-color-upscaled.png?raw=true)
