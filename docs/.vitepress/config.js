@@ -1,7 +1,7 @@
 import { defineConfig } from 'vitepress';
-import MermaidPlugin from 'vitepress-plugin-mermaid';
+import { withMermaid } from 'vitepress-plugin-mermaid';
 
-export default defineConfig({
+export default withMermaid({
   lang: 'en-US',
   title: 'Developer Documentation',
   description: 'Documentation for AI-READI developers',
@@ -14,8 +14,9 @@ export default defineConfig({
 
   markdown: {
     lineNumbers: true,
-    config: MermaidPlugin,
   },
+
+  mermaid: {},
 
   head: [
     [
@@ -114,6 +115,7 @@ export default defineConfig({
       '/git': sidebarGuide(),
       '/general': sidebarGuide(),
       '/fairhub': sidebarGuide(),
+      '/database': sidebarGuide(),
     },
 
     footer: {
@@ -163,6 +165,12 @@ function sidebarGuide() {
       text: 'fairhub.io',
       collapsible: true,
       items: [{ text: 'Tech stack', link: '/fairhub/techstack.md' }],
+    },
+
+    {
+      text: 'Database',
+      collapsible: true,
+      items: [{ text: 'Class diagram', link: '/database/class-diagram.md' }],
     },
   ];
 }

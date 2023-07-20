@@ -41,8 +41,8 @@
   "dependencies": {
     "flexsearch": "^0.7.31",
     "markdown-it": "^13.0.1",
-    "mermaid": "^9.1.3",
-    "vitepress-plugin-mermaid": "^2.0.0",
+    "mermaid": "^10.2.4",
+    "vitepress-plugin-mermaid": "^2.0.13",
     "vitepress-plugin-search": "^1.0.4-alpha.17"
   }
 }
