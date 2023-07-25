@@ -13,11 +13,12 @@ erDiagram
     STUDY{
         string id PK "UUIDv4"
         string title
-        string description
+        string description 
         string image
-        string last_updated
-        string size
         string[] keywords
+        date updated_on
+        date created_at
+        string size
     }
 
     USER{
@@ -29,6 +30,7 @@ erDiagram
         string last_name "`Family name` in UI"
         string institution
         string orcid
+        date created_at
         string location "Do we really need this?"
         string timezone "Might not need this either"
     }
@@ -43,16 +45,18 @@ erDiagram
         string email_address PK
         string study_id PK,FK "STUDy.id"
         string permission "owner|editor|viewer"
-        date invited
+        date invited_on 
     }
 
     PARTICIPANT{
-        string id PK "UUIDv4"
+        string id PK "UUIDv4" 
         string study_id FK "STUDY.id"
         string first_name "`Given name` in UI"
         string last_name "`Family name` in UI"
         string address
         int age "fields will come from redcap"
+        date updated_on
+        date created_at
     }
 
     DATASET{
@@ -72,8 +76,9 @@ erDiagram
         string description
         boolean published "should be uneditable after publish"
         string doi "identifier part only"
-        date last_edited
-        date created
+        date updated_on
+        date created_at
+        date published_on
         string[] keywords
     }
 
