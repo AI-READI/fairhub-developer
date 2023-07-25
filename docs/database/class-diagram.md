@@ -13,7 +13,7 @@ erDiagram
     STUDY{
         string id PK "UUIDv4"
         string title
-        string description 
+        string description
         string image
         string last_updated
         string size
@@ -43,11 +43,11 @@ erDiagram
         string email_address PK
         string study_id PK,FK "STUDy.id"
         string permission "owner|editor|viewer"
-        date invited 
+        date invited
     }
 
     PARTICIPANT{
-        string id PK "UUIDv4" 
+        string id PK "UUIDv4"
         string study_id FK "STUDY.id"
         string first_name "`Given name` in UI"
         string last_name "`Family name` in UI"
