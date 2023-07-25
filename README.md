@@ -114,7 +114,7 @@ This repository is automatically deployed to [Azure](https://azure.microsoft.com
 - https://ashy-coast-0f7701e10-<BRANCH_NAME>.centralus.2.azurestaticapps.net/
 - https://ashy-coast-0f7701e10-<GITHUB_PR_NUMBER>.centralus.2.azurestaticapps.net/
 
-The `production` branch is automatically deployed to the following URL: https://dev.fairhub.io
+The `main` branch is automatically deployed to the following URL: https://dev.fairhub.io
 
 ## Contributing
 
