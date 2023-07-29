@@ -23,6 +23,7 @@ jobs:
         run: |
           # sudo yum -y install libXScrnSaver-1.2.2-6.1.el7.x86_64
           # sudo yum install -y chromium
+          npm install -g puppeteer --unsafe-perm=true
           apt install chromium-browser
           apt install libxkbcommon0 
           apt install libxshmfence1
@@ -33,7 +34,7 @@ jobs:
           apt install libatk1.0-0 
           apt install libc6 
           apt install libcairo2 
-          apt install libcups2 
+          apt install libcups2 r
           apt install libdbus-1-3 
           apt install libexpat1 
           apt install libfontconfig1 
