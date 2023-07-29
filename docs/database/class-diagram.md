@@ -48,11 +48,11 @@ erDiagram
         string email_address PK
         string study_id PK,FK "STUDy.id"
         string permission "owner|editor|viewer"
-        date invited_on 
+        date invited_on
     }
 
     PARTICIPANT{
-        string id PK "UUIDv4" 
+        string id PK "UUIDv4"
         string study_id FK "STUDY.id"
         string first_name "`Given name` in UI"
         string last_name "`Family name` in UI"
@@ -87,7 +87,7 @@ erDiagram
 
     RELATED_RESOURCE {
         string id PK "UUIDv4"
-        string name 
+        string name
         string identifier
         string target "url/doi"
     }
@@ -201,7 +201,7 @@ erDiagram
     STUDY ||--o{ DATASET : publishes
 
     DATASET ||--o{ VERSION : creates
-    
+
     USER }o--o{ STUDY_CONTRIBUTOR : "part of"
     PARTICIPANT }o--|| STUDY : participates
     VERSION }o--o{ VERSION_PARTICIPANT : has
