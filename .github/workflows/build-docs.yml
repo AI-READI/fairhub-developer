@@ -21,8 +21,8 @@ jobs:
           submodules: true
       - name: Setup environment for pupeteer
         run: |
-          sudo yum -y install libXScrnSaver-1.2.2-6.1.el7.x86_64
-          sudo yum install -y chromium
+          # sudo yum -y install libXScrnSaver-1.2.2-6.1.el7.x86_64
+          # sudo yum install -y chromium
           apt install chromium-browser
           apt install libxkbcommon0 
           apt install libxshmfence1
