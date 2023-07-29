@@ -72,6 +72,13 @@ export default withMermaid({
       },
     ],
     ['meta', { name: 'theme-color', content: '#ffffff' }],
+    [
+      'script',
+      {
+        async: true,
+        src: 'https://cdn.jsdelivr.net/npm/svg-pan-zoom-container@0.6.1',
+      },
+    ],
   ],
 
   themeConfig: {

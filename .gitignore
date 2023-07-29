@@ -6,3 +6,4 @@ node_modules
 .cache
 yarn-error.log
 docs/.vitepress/dist
+docs/public/mermaid/*.svg
