@@ -55,7 +55,8 @@ erDiagram
         string id PK "UUIDv4"
         string study_id FK "STUDY.id"
         string latest_version FK "VERSION.id"
-        string title
+        string identifier
+        string identifier_type
         string description
         string primary_language
         string[] keywords
@@ -71,14 +72,6 @@ erDiagram
         date updated_on
         date created_at
         date published_on
-        string[] keywords
-    }
-
-    RELATED_RESOURCE {
-        string id PK "UUIDv4"
-        string name
-        string identifier
-        string target "url/doi"
     }
 
      VERSION_PARTICIPANT {
@@ -86,108 +79,13 @@ erDiagram
         string participant_id PK,FK
     }
 
-    STUDY_IDENTIFICATION {
-        string id PK "UUIDv4"
-        string study_id FK "STUDY.id"
-        string identifier
-        string identifier_type
-        string identifier_domain
-        string identifier_link
-        boolean secondary
-    }
-
-    STUDY_STATUS {
-        string id PK "UUIDv4"
-        string study_id FK "STUDY.id"
-        string overall_status
-        string why_stopped
-        date start_date
-        string start_date_type
-        date completion_date
-        string completion_date_type
-    }
-
-    STUDY_SPONSORS_COLLOBORATORS {
-        string id PK "UUIDv4"
-        string study_id FK "STUDY.id"
-        string responsible_party_type
-        string responsible_party_investigator_first_name
-        string responsible_party_investigator_last_name
-        string responsible_party_investigator_title
-        string responsible_party_investigator_affiliation
-        string lead_sponsor_first_name
-        string lead_sponsor_last_name
-        string[] collaborator_name
-    }
-
-    STUDY_DESIGN {
-        string id PK "UUIDv4"
-        string study_id FK "STUDY.id"
-        string study_type
-        string design_allocation
-        string design_interventional_model
-        string design_intervention_model_description
-        string design_primary_purpose
-        string design_masking
-        string design_masking_description
-        string[] design_who_masked_list
-        string[] phase_list
-        int enrollment_count
-        string enrollment_type
-        int number_arms
-        string[] design_observational_model_list
-        string[] design_time_perspective_list
-        string bio_spec_retention
-        string bio_spec_description
-        string target_duration
-        int number_groups_cohorts
-    }
-
-    STUDY_ARM {
-        string id PK "UUIDv4"
-        string study_id FK "STUDY.id"
-        string label
-        string type
-        string description
-        string intervention_list
-    }
-
-    STUDY_INTERVENTION {
-        string id PK "UUIDv4"
-        string study_id FK "STUDY.id"
-        string type
-        string name
-        string description
-        string[] arm_group_label_list
-        string[] other_name_list
-    }
-
-    STUDY_ELIGIBILTY {
-        string id PK "UUIDv4"
-        string study_id FK "STUDY.id"
-        string gender
-        boolean gender_based
-        string gender_description
-        string miminum_age
-        string maximum_age
-        boolean healthy_volunteers
-        string[] inclusion_criteria
-        string[] exclusion_criteria
-        string study_population
-        string sampling_method
-    }
-
     STUDY_CONTRIBUTOR }o--o{ STUDY : contributes
     INVITED_STUDY_CONTRIBUTOR }o--o{ STUDY : "invited to"
-    STUDY_IDENTIFICATION }o--|| STUDY : "is identified by"
-    STUDY_STATUS }o--|| STUDY : "is described by"
-    STUDY_SPONSORS_COLLOBORATORS ||--|| STUDY : "sponsors"
-    STUDY_DESIGN ||--|| STUDY : "is designed as"
-    STUDY_ARM ||--|| STUDY : "is armed as"
-    STUDY_INTERVENTION ||--|| STUDY : "is defined as"
-    STUDY_ELIGIBILTY ||--|| STUDY : "is eligible"
+    STUDY_METADATA ||--|| STUDY : "has metadata"
 
     STUDY ||--o{ DATASET : publishes
+
+    DATASET_METADATA ||--|| DATASET : "has metadata"
 
     DATASET ||--o{ VERSION : creates
 

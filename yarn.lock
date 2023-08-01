@@ -3664,6 +3664,11 @@ issue-parser@^6.0.0:
     lodash.isstring "^4.0.1"
     lodash.uniqby "^4.7.0"
 
+iv-viewer@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/iv-viewer/-/iv-viewer-2.0.1.tgz#566cdcfc2f2cefbb5b3c3654d3b22df1af805c8f"
+  integrity sha512-dPwFs3fHGJAwE9APaJB3UpEaxoTAG6N1wraKv48SjDvOP+CMzUmFbW+TWpyKVSpjRmpCsMdCoBFiLRAFsTkulA==
+
 java-properties@^1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/java-properties/-/java-properties-1.0.2.tgz#ccd1fa73907438a5b5c38982269d0e771fe78211"
@@ -6114,11 +6119,6 @@ supports-preserve-symlinks-flag@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
-
-svg-pan-zoom-container@^0.6.1:
-  version "0.6.1"
-  resolved "https://registry.yarnpkg.com/svg-pan-zoom-container/-/svg-pan-zoom-container-0.6.1.tgz#c2f716eeac053406aa26930d97f445f0888cf789"
-  integrity sha512-bfGYODNz3C4WxkPTdvujBaiHlVpiR8HNPX6nADWlg0Oa1jirlpmpHfjFzljGXrmyZrFwqqhsahx2lng4usMD1g==
 
 tar-fs@2.1.1:
   version "2.1.1"

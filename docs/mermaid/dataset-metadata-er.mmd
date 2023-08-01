@@ -1,0 +1,205 @@
+erDiagram
+    DATASET {
+        string id PK "UUIDv4"
+        string study_id FK "STUDY.id"
+        string latest_version FK "VERSION.id"
+        string published_year "year of publication: xxxx"
+        string resource_type
+        string publisher
+        string primary_language
+        string[] keywords
+    }
+
+      DATASET_IDENTIFIER {
+        string id PK "UUIDv4"
+        string dataset_id FK "DATASET.id"
+        string identifier
+        string identifier_type
+        boolean alternate
+    }
+
+    DATASET_TITLE {
+        string id PK "UUIDv4"
+        string dataset_id FK "DATASET.id"
+        string title
+        string type "needed to distinguish between main title and alternative titles"
+    }
+
+    DATASET_CONTRIBUTOR {
+        string id PK "UUIDv4"
+        string dataset_id FK "DATASET.id"
+        string first_name
+        string last_name
+        string name_type
+        string name_identifier
+        string name_identifier_scheme
+        string name_identifier_scheme_uri
+        boolean creator "true if creator, false if contributor"
+        string contributor_type "required if contributor"
+    }
+
+    DATASET_CONTRIBUTOR_AFFILIATION {
+        string id PK "UUIDv4"
+        string contributor_id FK "DATASET_CONTRIBUTOR.id"
+        string identifier 
+        string identifier_scheme
+        string identifier_scheme_uri
+    }
+
+    DATASET_DATE {
+        string id PK "UUIDv4"
+        string dataset_id FK "DATASET.id"
+        string date
+        string date_type
+        string date_information
+    }
+
+    DATASET_RECORD_KEYS {
+        string id PK "UUIDv4"
+        string dataset_id FK "DATASET.id"
+        string key_type
+        string key_details
+    }
+
+    DATASET_DE_IDENT_LEVEL {
+        string id PK "UUIDv4"
+        string dataset_id FK "DATASET.id"
+        string type
+        boolean direct
+        boolean hipaa
+        boolean dates
+        boolean nonarr
+        boolean k_anon
+        string details
+    }
+
+    DATASET_CONSENT {
+        string id PK "UUIDv4"
+        string dataset_id FK "DATASET.id"
+        string type
+        boolean noncommercial
+        boolean geog_restrict
+        boolean research_type
+        boolean genetic_only
+        boolean no_methods
+        string details
+    }
+
+    DATASET_DESCRIPTION {
+        string id PK "UUIDv4"
+        string dataset_id FK "DATASET.id"
+        string description
+        string description_type
+    }
+
+    DATASET_RELATED_IDENTIFIER {
+        string id PK "UUIDv4"
+        string dataset_id FK "DATASET.id"
+        string identifier
+        string type
+        string relation_type
+        string resource_type
+        string metadata_scheme
+        string scheme_uri
+        string scheme_type
+    }
+
+    DATASET_SUBJECT {
+        string id PK "UUIDv4"
+        string dataset_id FK "DATASET.id"
+        string subject
+        string scheme
+        string scheme_uri
+        string value_uri
+        string classification_code
+    }
+
+    DATASET_MANAGING_ORGANIZATION {
+        string id PK "UUIDv4"
+        string dataset_id FK "DATASET.id"
+        string name
+        string ror_id
+    }
+
+    DATASET_ACCESS {
+        string id PK "UUIDv4"
+        string dataset_id FK "DATASET.id"
+        string type
+        string description
+        string url
+        string url_last_checked
+    }
+
+    DATASET_RIGHTS {
+        string id PK "UUIDv4"
+        string dataset_id FK "DATASET.id"
+        string rights
+        string uri
+        string identifier
+        string identifier_scheme
+    }
+
+    DATASET_SIZE {
+        string id PK "UUIDv4"
+        string dataset_id FK "DATASET.id"
+        string size
+        string size_unit
+    }
+
+    DATASET_FUNDER {
+        string id PK "UUIDv4"
+        string dataset_id FK "DATASET.id"
+        string name
+        string identifier
+        string identifier_type
+        string identifier_scheme_uri
+        string award_number
+        string award_uri
+        string award_title
+    }
+
+    DATASET_RELATED_ITEM {
+        string id PK "UUIDv4"
+        string dataset_id FK "DATASET.id"
+        string type
+        string relation_type
+    }
+
+    DATASET_RELATED_ITEM_IDENTIFIER {
+        string id PK "UUIDv4"
+        string related_item_id FK "DATASET_RELATED_ITEM.id"
+        string identifier
+        string type
+        string metadata_scheme
+        string scheme_uri
+        string scheme_type
+    }
+
+    DATASET_RELATED_ITEM_CONTRIBUTOR {
+        string id PK "UUIDv4"
+        string related_item_id FK "DATASET_RELATED_ITEM.id"
+        string first_name
+        string last_name
+        string name_type
+        boolean creator "true if creator, false if contributor"
+        string contributor_type "required if contributor"
+    }
+
+
+    DATASET_IDENTIFIER }o--|| DATASET : "is identified by"
+    DATASET_TITLE }o--|| DATASET : "has title"
+    DATASET_CONTRIBUTOR }o--|| DATASET : "has contributor"
+    DATASET_CONTRIBUTOR_AFFILIATION }o--|| DATASET_CONTRIBUTOR : "has affiliation"
+    DATASET_DATE }o--|| DATASET : "has date"
+    DATASET_RECORD_KEYS }o--|| DATASET : "has record key"
+    DATASET_DE_IDENT_LEVEL }o--|| DATASET : "has de-identification level"
+    DATASET_CONSENT }o--|| DATASET : "has consent"
+
+    DATASET ||--o{ DATASET_DESCRIPTION : "has description"
+    DATASET ||--o{ DATASET_RELATED_IDENTIFIER : "has related identifier"
+    DATASET ||--o{ DATASET_SUBJECT : "has subject"
+    DATASET ||--|| DATASET_MANAGING_ORGANIZATION : "has managing organization"
+    DATASET ||--o{ DATASET_ACCESS : "has access"
+    DATASET ||--o{ DATASET_RIGHTS : "has rights"
+    DATASET ||--o{ DATASET_SIZE : "has item of size"
+    DATASET ||--o{ DATASET_FUNDER : "has funder"

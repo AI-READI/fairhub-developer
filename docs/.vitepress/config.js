@@ -100,10 +100,6 @@ export default withMermaid({
 
     nav: [
       {
-        text: 'Home',
-        link: '/',
-      },
-      {
         text: 'Overview',
         link: '/docs/overview.md',
       },

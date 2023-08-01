@@ -1,0 +1,194 @@
+erDiagram
+    STUDY {
+        string id PK "UUIDv4"
+        string title
+        string image
+        date updated_on
+        date created_at
+        string size
+        boolean oversight_has_dmc
+        string brief_summary "should act as a default description"
+        string detailed_description
+        string[] conditions
+        string[] keywords
+    }
+
+    STUDY_IDENTIFICATION {
+        string id PK "UUIDv4"
+        string study_id FK "STUDY.id"
+        string identifier
+        string identifier_type
+        string identifier_domain
+        string identifier_link
+        boolean secondary
+    }
+
+    STUDY_STATUS {
+        string id PK "UUIDv4"
+        string study_id FK "STUDY.id"
+        string overall_status
+        string why_stopped
+        date start_date
+        string start_date_type
+        date completion_date
+        string completion_date_type
+    }
+
+    STUDY_SPONSORS_COLLOBORATORS {
+        string id PK "UUIDv4"
+        string study_id FK "STUDY.id"
+        string responsible_party_type
+        string responsible_party_investigator_first_name
+        string responsible_party_investigator_last_name
+        string responsible_party_investigator_title
+        string responsible_party_investigator_affiliation
+        string lead_sponsor_first_name
+        string lead_sponsor_last_name
+        string[] collaborator_name
+    }
+
+    STUDY_DESIGN {
+        string id PK "UUIDv4"
+        string study_id FK "STUDY.id"
+        string study_type
+        string design_allocation
+        string design_interventional_model
+        string design_intervention_model_description
+        string design_primary_purpose
+        string design_masking
+        string design_masking_description
+        string[] design_who_masked_list
+        string[] phase_list
+        int enrollment_count
+        string enrollment_type
+        int number_arms
+        string[] design_observational_model_list
+        string[] design_time_perspective_list
+        string bio_spec_retention
+        string bio_spec_description
+        string target_duration
+        int number_groups_cohorts
+    }
+
+    STUDY_ARM {
+        string id PK "UUIDv4"
+        string study_id FK "STUDY.id"
+        string label
+        string type
+        string description
+        string[] intervention_list
+    }
+
+    STUDY_INTERVENTION {
+        string id PK "UUIDv4"
+        string study_id FK "STUDY.id"
+        string type
+        string name
+        string description
+        string[] arm_group_label_list
+        string[] other_name_list
+    }
+
+    STUDY_ELIGIBILTY {
+        string id PK "UUIDv4"
+        string study_id FK "STUDY.id"
+        string gender
+        boolean gender_based
+        string gender_description
+        string miminum_age
+        string maximum_age
+        boolean healthy_volunteers
+        string[] inclusion_criteria "Will be combined to become EligibilityCriteria" 
+        string[] exclusion_criteria "Will be combined to become EligibilityCriteria"
+        string study_population
+        string sampling_method
+    }
+
+    STUDY_CONTACT {
+        string id PK "UUIDv4"
+        string study_id FK "STUDY.id"
+        string first_name
+        string last_name
+        string affiliation
+        string phone
+        string phone_ext
+        string email_address
+        boolean central_contact "no would be a location contact"
+        string role "used for location contacts"
+    }
+
+    STUDY_OVERALL_OFFICIAL {
+        string id PK "UUIDv4"
+        string study_id FK "STUDY.id"
+        string first_name
+        string last_name
+        string affiliation
+        string role
+    }
+
+    STUDY_LOCATION {
+        string id PK "UUIDv4"
+        string study_id FK "STUDY.id"
+        string facility
+        string status
+        string city
+        string state
+        string zip
+        string country
+    }
+
+    STUDY_IPDSHARING {
+        string id PK "UUIDv4"
+        string study_id FK "STUDY.id"
+        string ipd_sharing "yes|no|undecided"
+        string ipd_sharing_description
+        string[] ipd_sharing_info_type_list
+        string ipd_sharing_time_frame
+        string ipd_sharing_access_criteria
+        string ipd_sharing_url
+    }
+
+    STUDY_REFERENCE {
+        string id PK "UUIDv4"
+        string study_id FK "STUDY.id"
+        string identifier 
+        string title 
+        boolean type "does reference provided report on results from this clinical study"
+        string citation
+    }
+
+    STUDY_LINK {
+        string id PK "UUIDv4"
+        string study_id FK "STUDY.id"
+        string url
+        string title
+    }
+
+    STUDY_AVAILABLE_IPD {
+        string id PK "UUIDv4"
+        string study_id FK "STUDY.id"
+        string identifier
+        string type
+        string url
+        string comment
+    }
+
+    
+    STUDY_STATUS ||--|| STUDY : "is described by"
+    STUDY_SPONSORS_COLLOBORATORS ||--|| STUDY : "sponsors"
+    STUDY_DESIGN ||--|| STUDY : "is designed as"
+    STUDY_ARM }o--|| STUDY : "is armed as"
+    STUDY_INTERVENTION }o--|| STUDY : "is defined as"
+    STUDY_ELIGIBILTY ||--|| STUDY : "is eligible"
+    STUDY_LOCATION }o--|| STUDY : "is done at"
+    STUDY_IPDSHARING ||--|| STUDY : "is shared via"
+
+
+    STUDY ||--o{ STUDY_CONTACT : "is contacted by"
+    STUDY ||--o{ STUDY_OVERALL_OFFICIAL : "is lead by"
+
+    STUDY ||--o{ STUDY_IDENTIFICATION : "identifies"
+     
+    STUDY ||--o{ STUDY_REFERENCE : "references"
+    STUDY ||--o{ STUDY_LINK : "links to"
+    STUDY ||--o{ STUDY_AVAILABLE_IPD : "links to"

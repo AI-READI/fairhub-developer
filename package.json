@@ -47,9 +47,9 @@
   },
   "dependencies": {
     "flexsearch": "^0.7.31",
+    "iv-viewer": "^2.0.1",
     "markdown-it": "^13.0.1",
     "mermaid": "^10.2.4",
-    "svg-pan-zoom-container": "^0.6.1",
     "vitepress-plugin-mermaid": "^2.0.13",
     "vitepress-plugin-search": "^1.0.4-alpha.17"
   }
