@@ -87,8 +87,6 @@ erDiagram
         string description_type
     }
 
-
-
     DATASET_SUBJECT {
         string id PK "UUIDv4"
         string dataset_id FK "DATASET.id"
@@ -122,13 +120,6 @@ erDiagram
         string uri
         string identifier
         string identifier_scheme
-    }
-
-    DATASET_SIZE {
-        string id PK "UUIDv4"
-        string dataset_id FK "DATASET.id"
-        string size
-        string size_unit
     }
 
     DATASET_FUNDER {
@@ -201,6 +192,7 @@ erDiagram
 
     DATASET_IDENTIFIER }o--|| DATASET : "is identified by"
     DATASET_TITLE }o--|| DATASET : "has title"
+    DATASET_DESCRIPTION }o--|| DATASET : "has description"
     DATASET_CONTRIBUTOR }o--|| DATASET : "has contributor"
     DATASET_CONTRIBUTOR_AFFILIATION }o--|| DATASET_CONTRIBUTOR : "has affiliation"
     DATASET_DATE }o--|| DATASET : "has date"
@@ -208,12 +200,10 @@ erDiagram
     DATASET_DE_IDENT_LEVEL }o--|| DATASET : "has de-identification level"
     DATASET_CONSENT }o--|| DATASET : "has consent"
 
-    DATASET ||--o{ DATASET_DESCRIPTION : "has description"
     DATASET ||--o{ DATASET_SUBJECT : "has subject"
     DATASET ||--|| DATASET_MANAGING_ORGANIZATION : "has managing organization"
     DATASET ||--o{ DATASET_ACCESS : "has access"
     DATASET ||--o{ DATASET_RIGHTS : "has rights"
-    DATASET ||--o{ DATASET_SIZE : "has item of size"
     DATASET ||--o{ DATASET_FUNDER : "has funder"
     DATASET ||--o{ DATASET_OTHER : "has other details"
     DATASET ||--o{ DATASET_RELATED_ITEM : "has related item"
