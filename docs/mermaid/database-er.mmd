@@ -33,9 +33,9 @@ erDiagram
         string permission "owner|editor|viewer"
     }
 
-    INVITED_STUDY_CONTRIBUTOR {
+    STUDY_INVITED_CONTRIBUTOR {
         string email_address PK
-        string study_id PK,FK "STUDy.id"
+        string study_id PK,FK "STUDY.id"
         string permission "owner|editor|viewer"
         date invited_on
     }
@@ -55,18 +55,13 @@ erDiagram
         string id PK "UUIDv4"
         string study_id FK "STUDY.id"
         string latest_version FK "VERSION.id"
-        string identifier
-        string identifier_type
-        string description
-        string primary_language
-        string[] keywords
     }
 
     VERSION {
         string id PK "UUIDv4"
         string dataset_id FK "DATASET.id"
         string title
-        string description
+        string changelog
         boolean published "should be uneditable after publish"
         string doi "identifier part only"
         date updated_on
@@ -79,8 +74,8 @@ erDiagram
         string participant_id PK,FK
     }
 
-    STUDY_CONTRIBUTOR }o--o{ STUDY : contributes
-    INVITED_STUDY_CONTRIBUTOR }o--o{ STUDY : "invited to"
+    STUDY_CONTRIBUTOR }o--|| STUDY : contributes
+    STUDY_INVITED_CONTRIBUTOR }o--|| STUDY : "invited to"
     STUDY_METADATA ||--|| STUDY : "has metadata"
 
     STUDY ||--o{ DATASET : publishes
@@ -89,7 +84,7 @@ erDiagram
 
     DATASET ||--o{ VERSION : creates
 
-    USER }o--o{ STUDY_CONTRIBUTOR : "part of"
+    USER ||--o{ STUDY_CONTRIBUTOR : "part of"
     PARTICIPANT }o--|| STUDY : participates
-    VERSION }o--o{ VERSION_PARTICIPANT : has
-    VERSION_PARTICIPANT }o--o{ PARTICIPANT : "part of"
+    VERSION ||--o{ VERSION_PARTICIPANT : has
+    VERSION_PARTICIPANT }o--|| PARTICIPANT : "part of"
