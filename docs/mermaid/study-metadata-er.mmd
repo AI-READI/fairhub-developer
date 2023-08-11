@@ -5,12 +5,6 @@ erDiagram
         string image
         date updated_on
         date created_at
-        string size
-        boolean oversight_has_dmc
-        string brief_summary "should act as a default description"
-        string detailed_description
-        string[] conditions
-        string[] keywords
     }
 
     STUDY_IDENTIFICATION {
@@ -21,6 +15,13 @@ erDiagram
         string identifier_domain
         string identifier_link
         boolean secondary
+    }
+
+    STUDY_DESCRIPTION {
+        string id PK "UUIDv4"
+        string study_id FK "STUDY.id"
+        string brief_summary "should act as a default description"
+        string detailed_description
     }
 
     STUDY_STATUS {
@@ -173,6 +174,15 @@ erDiagram
         string comment
     }
 
+    STUDY_OTHER {
+        string id PK "UUIDv4"
+        string study_id FK "STUDY.id"
+        boolean oversight_has_dmc
+        string[] conditions
+        string[] keywords
+        string size "size of the files in the data lake"
+    }
+
     
     STUDY_STATUS ||--|| STUDY : "is described by"
     STUDY_SPONSORS_COLLOBORATORS ||--|| STUDY : "sponsors"
@@ -187,8 +197,12 @@ erDiagram
     STUDY ||--o{ STUDY_CONTACT : "is contacted by"
     STUDY ||--o{ STUDY_OVERALL_OFFICIAL : "is lead by"
 
+    STUDY ||--o{ STUDY_DESCRIPTION : "describes"
+
     STUDY ||--o{ STUDY_IDENTIFICATION : "identifies"
      
     STUDY ||--o{ STUDY_REFERENCE : "references"
     STUDY ||--o{ STUDY_LINK : "links to"
     STUDY ||--o{ STUDY_AVAILABLE_IPD : "links to"
+
+    STUDY ||--o{ STUDY_OTHER : "has other information"

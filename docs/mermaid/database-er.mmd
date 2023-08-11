@@ -5,12 +5,6 @@ erDiagram
         string image
         date updated_on
         date created_at
-        string size
-        boolean oversight_has_dmc
-        string brief_summary "should act as a default description"
-        string detailed_description
-        string[] conditions
-        string[] keywords
     }
 
     USER {
@@ -55,6 +49,8 @@ erDiagram
         string id PK "UUIDv4"
         string study_id FK "STUDY.id"
         string latest_version FK "VERSION.id"
+        date updated_on
+        date created_at
     }
 
     VERSION {
