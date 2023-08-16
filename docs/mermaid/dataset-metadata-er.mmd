@@ -208,7 +208,7 @@ erDiagram
     DATASET_RECORD_KEYS }o--|| DATASET : "has record key"
     DATASET_DE_IDENT_LEVEL }o--|| DATASET : "has de-identification level"
     DATASET_CONSENT }o--|| DATASET : "has consent"
-    DATASET_README }o--|| DATASET : "has readme"
+    DATASET_README ||--|| DATASET : "has readme"
 
     DATASET ||--o{ DATASET_SUBJECT : "has subject"
     DATASET ||--|| DATASET_MANAGING_ORGANIZATION : "has managing organization"
