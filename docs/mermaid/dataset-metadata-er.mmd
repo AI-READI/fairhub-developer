@@ -6,12 +6,11 @@ erDiagram
         date created_at
     }
 
-      DATASET_IDENTIFIER {
+      DATASET_ALTERNATE_IDENTIFIER {
         string id PK "UUIDv4"
         string dataset_id FK "DATASET.id"
         string identifier
         string identifier_type
-        boolean alternate
     }
 
     DATASET_TITLE {
@@ -198,30 +197,30 @@ erDiagram
         string edition
     }
 
-    DATASET_IDENTIFIER }o--|| DATASET : "is identified by"
+    DATASET_ALTERNATE_IDENTIFIER }o--|| DATASET : "is identified by"
     DATASET_TITLE }o--|| DATASET : "has title"
     DATASET_DESCRIPTION }o--|| DATASET : "has description"
     DATASET_CONTRIBUTOR }o--|| DATASET : "has contributor"
     DATASET_CONTRIBUTOR_AFFILIATION }o--|| DATASET_CONTRIBUTOR : "has affiliation"
     DATASET_DATE }o--|| DATASET : "has date"
-    DATASET_RECORD_KEYS }o--|| DATASET : "has record key"
-    DATASET_DE_IDENT_LEVEL }o--|| DATASET : "has de-identification level"
-    DATASET_CONSENT }o--|| DATASET : "has consent"
+    DATASET_RECORD_KEYS ||--|| DATASET : "has record key"
+    DATASET_DE_IDENT_LEVEL ||--|| DATASET : "has deidentification level"
+    DATASET_CONSENT ||--|| DATASET : "has consent"
     DATASET_README ||--|| DATASET : "has readme"
 
     DATASET ||--o{ DATASET_SUBJECT : "has subject"
     DATASET ||--|| DATASET_MANAGING_ORGANIZATION : "has managing organization"
-    DATASET ||--o{ DATASET_ACCESS : "has access"
+    DATASET ||--|| DATASET_ACCESS : "has access"
     DATASET ||--o{ DATASET_RIGHTS : "has rights"
     DATASET ||--o{ DATASET_FUNDER : "has funder"
-    DATASET ||--o{ DATASET_OTHER : "has other details"
+    DATASET ||--|| DATASET_OTHER : "has other details"
     DATASET ||--o{ DATASET_RELATED_ITEM : "has related item"
 
 
     DATASET_RELATED_ITEM ||--o{ DATASET_RELATED_ITEM_IDENTIFIER : "has identifier"
     DATASET_RELATED_ITEM ||--o{ DATASET_RELATED_ITEM_CONTRIBUTOR : "has contributor"
     DATASET_RELATED_ITEM ||--o{ DATASET_RELATED_ITEM_TITLE : "has title"
-    DATASET_RELATED_ITEM ||--o{ DATASET_RELATED_ITEM_OTHER : "has other details"
+    DATASET_RELATED_ITEM ||--|| DATASET_RELATED_ITEM_OTHER : "has other details"
 
 
     

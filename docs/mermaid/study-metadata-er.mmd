@@ -195,7 +195,7 @@ erDiagram
     STUDY ||--o{ STUDY_CONTACT : "is contacted by"
     STUDY ||--o{ STUDY_OVERALL_OFFICIAL : "is lead by"
 
-    STUDY ||--o{ STUDY_DESCRIPTION : "describes"
+    STUDY ||--|| STUDY_DESCRIPTION : "describes"
 
     STUDY ||--o{ STUDY_IDENTIFICATION : "identifies"
      
@@ -203,4 +203,4 @@ erDiagram
     STUDY ||--o{ STUDY_LINK : "links to"
     STUDY ||--o{ STUDY_AVAILABLE_IPD : "links to"
 
-    STUDY ||--o{ STUDY_OTHER : "has other information"
+    STUDY ||--|| STUDY_OTHER : "has other information"
