@@ -92,11 +92,13 @@ erDiagram
         string id PK "UUIDv4"
         string study_id FK "STUDY.id"
         string gender
-        boolean gender_based
+        string gender_based
         string gender_description
-        string miminum_age
-        string maximum_age
-        boolean healthy_volunteers
+        int miminum_age_value
+        string miminum_age_unit
+        int maximum_age_value
+        string maximum_age_unit
+        string healthy_volunteers
         string[] inclusion_criteria "Will be combined to become EligibilityCriteria" 
         string[] exclusion_criteria "Will be combined to become EligibilityCriteria"
         string study_population
