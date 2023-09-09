@@ -11,10 +11,11 @@ erDiagram
         string id PK "UUIDv4"
         string study_id FK "STUDY.id"
         string identifier
-        string identifier_type
+        string identifier_type "NULLABLE"
         string identifier_domain
         string identifier_link
         boolean secondary
+        timestamp created_at
     }
 
     STUDY_DESCRIPTION {
@@ -27,18 +28,18 @@ erDiagram
     STUDY_STATUS {
         string id PK "UUIDv4"
         string study_id FK "STUDY.id"
-        string overall_status
+        string overall_status "NULLABLE"
         string why_stopped
-        date start_date
-        string start_date_type
-        date completion_date
-        string completion_date_type
+        string start_date
+        string start_date_type "NULLABLE"
+        string completion_date "NULLABLE"
+        string completion_date_type "NULLABLE"
     }
 
     STUDY_SPONSORS_COLLOBORATORS {
         string id PK "UUIDv4"
         string study_id FK "STUDY.id"
-        string responsible_party_type
+        string responsible_party_type "NULLABLE"
         string responsible_party_investigator_name
         string responsible_party_investigator_title
         string responsible_party_investigator_affiliation
@@ -50,59 +51,61 @@ erDiagram
         string id PK "UUIDv4"
         string study_id FK "STUDY.id"
         string study_type
-        string design_allocation
-        string design_interventional_model
+        string design_allocation "NULLABLE"
+        string design_intervention_model "NULLABLE"
         string design_intervention_model_description
-        string design_primary_purpose
-        string design_masking
-        string design_masking_description
-        string[] design_who_masked_list
-        string[] phase_list
-        int enrollment_count
-        string enrollment_type
-        int number_arms
-        string[] design_observational_model_list
-        string[] design_time_perspective_list
-        string bio_spec_retention
-        string bio_spec_description
-        string target_duration
-        int number_groups_cohorts
+        string design_primary_purpose "NULLABLE"
+        string design_masking "NULLABLE"
+        string design_masking_description "NULLABLE"
+        string[] design_who_masked_list "NULLABLE"
+        string[] phase_list "NULLABLE"
+        int enrollment_count "NULLABLE"
+        string enrollment_type "NULLABLE"
+        int number_arms "NULLABLE"
+        string[] design_observational_model_list "NULLABLE"
+        string[] design_time_perspective_list "NULLABLE"
+        string bio_spec_retention "NULLABLE"
+        string bio_spec_description "NULLABLE"
+        string target_duration "NULLABLE"
+        int number_groups_cohorts "NULLABLE"
     }
 
     STUDY_ARM {
         string id PK "UUIDv4"
         string study_id FK "STUDY.id"
         string label
-        string type
+        string type "NULLABLE"
         string description
         string[] intervention_list
+        timestamp created_at
     }
 
     STUDY_INTERVENTION {
         string id PK "UUIDv4"
         string study_id FK "STUDY.id"
-        string type
+        string type "NULLABLE"
         string name
         string description
         string[] arm_group_label_list
         string[] other_name_list
+        timestamp created_at
     }
 
     STUDY_ELIGIBILTY {
         string id PK "UUIDv4"
         string study_id FK "STUDY.id"
-        string gender
-        string gender_based
+        string gender "NULLABLE"
+        string gender_based "NULLABLE"
         string gender_description
-        int miminum_age_value
-        string miminum_age_unit
-        int maximum_age_value
-        string maximum_age_unit
-        string healthy_volunteers
+        int miminum_age_value "NULLABLE"
+        string miminum_age_unit "NULLABLE"
+        int maximum_age_value "NULLABLE"
+        string maximum_age_unit "NULLABLE"
+        string healthy_volunteers "NULLABLE"
         string[] inclusion_criteria "Will be combined to become EligibilityCriteria" 
         string[] exclusion_criteria "Will be combined to become EligibilityCriteria"
         string study_population
-        string sampling_method
+        string sampling_method "NULLABLE"
     }
 
     STUDY_CONTACT {
@@ -116,6 +119,7 @@ erDiagram
         string email_address
         boolean central_contact "no would be a location contact"
         string role "used for location contacts"
+        timestamp created_at
     }
 
     STUDY_OVERALL_OFFICIAL {
@@ -124,24 +128,26 @@ erDiagram
         string first_name
         string last_name
         string affiliation
-        string role
+        string role "NULLABLE"
+        timestamp created_at
     }
 
     STUDY_LOCATION {
         string id PK "UUIDv4"
         string study_id FK "STUDY.id"
         string facility
-        string status
+        string status "NULLABLE"
         string city
         string state
         string zip
         string country
+        timestamp created_at
     }
 
     STUDY_IPDSHARING {
         string id PK "UUIDv4"
         string study_id FK "STUDY.id"
-        string ipd_sharing "yes|no|undecided"
+        string ipd_sharing "NULLABLE"
         string ipd_sharing_description
         string[] ipd_sharing_info_type_list
         string ipd_sharing_time_frame
@@ -154,8 +160,9 @@ erDiagram
         string study_id FK "STUDY.id"
         string identifier 
         string title 
-        string type "does reference provided report on results from this clinical study"
+        string type "NULLABLE"
         string citation
+        timestamp created_at
     }
 
     STUDY_LINK {
@@ -163,21 +170,23 @@ erDiagram
         string study_id FK "STUDY.id"
         string url
         string title
+        timestamp created_at
     }
 
     STUDY_AVAILABLE_IPD {
         string id PK "UUIDv4"
         string study_id FK "STUDY.id"
         string identifier
-        string type
+        string type "NULLABLE"
         string url
         string comment
+        timestamp created_at
     }
 
     STUDY_OTHER {
         string id PK "UUIDv4"
         string study_id FK "STUDY.id"
-        boolean oversight_has_dmc
+        boolean oversight_has_dmc 
         string[] conditions
         string[] keywords
         string size "size of the files in the data lake"

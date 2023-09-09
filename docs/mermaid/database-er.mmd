@@ -3,8 +3,8 @@ erDiagram
         string id PK "UUIDv4"
         string title
         string image
-        date updated_on
-        date created_at
+        timestamp updated_on
+        timestamp created_at
     }
 
     USER {
@@ -16,7 +16,7 @@ erDiagram
         string last_name "`Family name` in UI"
         string institution
         string orcid
-        date created_at
+        timestamp created_at
         string location "Do we really need this?"
         string timezone "Might not need this either"
     }
@@ -31,7 +31,7 @@ erDiagram
         string email_address PK
         string study_id PK,FK "STUDY.id"
         string permission "owner|editor|viewer"
-        date invited_on
+        timestamp invited_on
     }
 
     PARTICIPANT {
@@ -41,15 +41,15 @@ erDiagram
         string last_name "`Family name` in UI"
         string address
         int age "fields will come from redcap"
-        date updated_on
-        date created_at
+        timestamp updated_on
+        timestamp created_at
     }
 
     DATASET {
         string id PK "UUIDv4"
         string study_id FK "STUDY.id"
-        date updated_on
-        date created_at
+        timestamp updated_on
+        timestamp created_at
     }
 
     VERSION {
@@ -59,9 +59,9 @@ erDiagram
         string changelog
         boolean published "should be uneditable after publish"
         string doi "identifier part only"
-        date updated_on
-        date created_at
-        date published_on
+        timestamp updated_on
+        timestamp created_at
+        timestamp published_on
     }
 
      VERSION_PARTICIPANT {
