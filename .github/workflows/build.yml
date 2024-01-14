@@ -1,4 +1,4 @@
-name: Azure Static Web Apps CI/CD
+name: Build and deploy to Azure Static Web Apps (white-bay-0ccaeb310)
 
 on:
   push:
